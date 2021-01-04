@@ -1,44 +1,34 @@
 <template>
   <div class="app-main-layout">
-    <DashNavbar />
+    <dash-navbar @dashsidebarevent="isOpen = !isOpen" />
 
-    <ul class="sidenav app-sidenav open">
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Счет</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">История</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Планирование</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Новая запись</a>
-      </li>
-      <li>
-        <a href="#" class="waves-effect waves-orange pointer">Категории</a>
-      </li>
-    </ul>
+    <dash-sidebar v-model="isOpen"/>
 
-    <main class="app-content">
+    <main class="app-content" :class="{full: !isOpen}">
       <div class="app-page">
         <router-view/>
       </div>
     </main>
 
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large blue" href="#">
+      <router-link class="btn-floating btn-large blue" to="/record">
         <i class="large material-icons">add</i>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import '@/components/dashboard/DashNavbar'
+import DashNavbar from '../components/dashboard/DashNavbar'
+import DashSidebar from '../components/dashboard/DashSidebar'
 export default {
+  name: 'dashboardlayout',
+  data: () => ({
+    isOpen: true
+  }),
   components: {
-    DashNavbar
+    DashNavbar,
+    DashSidebar
   }
 }
 </script>

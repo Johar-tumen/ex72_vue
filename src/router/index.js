@@ -9,37 +9,37 @@ const routes = [
     path: "/",
     name: "Home",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/dashboard/Home.vue')
   },
   {
     path: "/detailrecord",
     name: "DetailRecord",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/DetailRecord.vue')
+    component: () => import('../views/dashboard/DetailRecord.vue')
   },
   {
     path: "/History",
     name: "History",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/History.vue')
+    component: () => import('../views/dashboard/History.vue')
   },
   {
     path: "/Planing",
     name: "Planing",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/Planing.vue')
+    component: () => import('../views/dashboard/Planing.vue')
   },
   {
     path: "/Profile",
     name: "Profile",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/Profile.vue')
+    component: () => import('../views/dashboard/Profile.vue')
   },
   {
     path: "/Record",
     name: "Record",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/Record.vue')
+    component: () => import('../views/dashboard/Record.vue')
   },
   {
     path: "/Register",
@@ -57,7 +57,7 @@ const routes = [
     path: "/categories",
     name: "categories",
     meta: {layout: 'dashboard'},
-    component: () => import('../views/Categories.vue')
+    component: () => import('../views/dashboard/Categories.vue')
   },
   {
     path: "/about",
