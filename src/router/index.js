@@ -1,63 +1,62 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/Home.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/Home.vue")
   },
   {
     path: "/detailrecord",
     name: "DetailRecord",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/DetailRecord.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/DetailRecord.vue")
   },
   {
     path: "/History",
     name: "History",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/History.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/History.vue")
   },
   {
     path: "/Planing",
     name: "Planing",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/Planing.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/Planing.vue")
   },
   {
     path: "/Profile",
     name: "Profile",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/Profile.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/Profile.vue")
   },
   {
     path: "/Record",
     name: "Record",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/Record.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/Record.vue")
   },
   {
     path: "/Register",
     name: "Register",
-    meta: {layout: 'empty'},
-    component: () => import('../views/Register.vue')
+    meta: { layout: "empty" },
+    component: () => import("../views/Register.vue")
   },
   {
     path: "/login",
     name: "login",
-    meta: {layout: 'empty'},
-    component: () => import('../views/Login.vue')
+    meta: { layout: "empty" },
+    component: () => import("../views/Login.vue")
   },
   {
     path: "/categories",
     name: "categories",
-    meta: {layout: 'dashboard'},
-    component: () => import('../views/dashboard/Categories.vue')
+    meta: { layout: "dashboard" },
+    component: () => import("../views/dashboard/Categories.vue")
   },
   {
     path: "/about",

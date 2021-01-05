@@ -2,11 +2,11 @@
   <div class="app-main-layout">
     <dash-navbar @dashsidebarevent="isOpen = !isOpen" />
 
-    <dash-sidebar v-model="isOpen"/>
+    <dash-sidebar v-model="isOpen" />
 
-    <main class="app-content" :class="{full: !isOpen}">
+    <main class="app-content" :class="{ full: !isOpen }">
       <div class="app-page">
-        <router-view/>
+        <router-view />
       </div>
     </main>
 
@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import DashNavbar from '../components/dashboard/DashNavbar'
-import DashSidebar from '../components/dashboard/DashSidebar'
+import DashNavbar from "../components/dashboard/DashNavbar";
+import DashSidebar from "../components/dashboard/DashSidebar";
 export default {
-  name: 'dashboardlayout',
+  name: "dashboardlayout",
   data: () => ({
     isOpen: true
   }),
@@ -30,5 +30,5 @@ export default {
     DashNavbar,
     DashSidebar
   }
-}
+};
 </script>
